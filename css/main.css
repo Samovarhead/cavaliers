@@ -1,3 +1,39 @@
+@font-face {
+  font-family: "BebasNeueBook";
+  src: url("../fonts/BebasNeueBook.otf"); }
+
+@font-face {
+  font-family: "MorganiteBold";
+  src: url("../fonts/Morganite Bold.ttf"); }
+
+@font-face {
+  font-family: "MorganiteBook";
+  src: url("../fonts/Morganite-Book.ttf"); }
+
+@font-face {
+  font-family: "MorganiteExtraBold";
+  src: url("../fonts/Morganite-ExtraBold.ttf"); }
+
+@font-face {
+  font-family: "MorganiteMedium";
+  src: url("../fonts/Morganite-Medium.ttf"); }
+
+@font-face {
+  font-family: "MorganiteSemiBold";
+  src: url("../fonts/Morganite-SemiBold.ttf"); }
+
+@font-face {
+  font-family: "SpaceGroteskBold";
+  src: url("../fonts/SpaceGrotesk-Bold.otf"); }
+
+@font-face {
+  font-family: "SpaceGroteskMedium";
+  src: url("../fonts/SpaceGrotesk-Medium.otf"); }
+
+@font-face {
+  font-family: "SpaceGroteskRegular";
+  src: url("../fonts/SpaceGrotesk-Regular.otf"); }
+
 * {
   margin: 0;
   padding: 0; }
@@ -20,23 +56,250 @@ body {
   top: 0;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
-  transition: 0.5s; }
+  transition: 0.5s;
+  -webkit-transition-timing-function: 0.32, 1, 0, 0.89;
+  -o-transition-timing-function: 0.32, 1, 0, 0.89;
+  transition-timing-function: 0.32, 1, 0, 0.89; }
 
 .gone-bottom {
   top: 100%;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
-  transition: 0.5s; }
+  transition: 0.5s;
+  -webkit-transition-timing-function: 0.32, 1, 0, 0.89;
+  -o-transition-timing-function: 0.32, 1, 0, 0.89;
+  transition-timing-function: 0.32, 1, 0, 0.89; }
 
 .gone-top {
   top: -100%;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
-  transition: 0.5s; }
+  transition: 0.5s;
+  -webkit-transition-timing-function: 0.32, 1, 0, 0.89;
+  -o-transition-timing-function: 0.32, 1, 0, 0.89;
+  transition-timing-function: 0.32, 1, 0, 0.89; }
+
+/*-------------------------------------------------Fixed-pan*/
+.logo-icon {
+  position: absolute;
+  top: 68px;
+  left: 82px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 5000; }
+  .logo-icon .logo1, .logo-icon .logo2, .logo-icon .logo3, .logo-icon .logo4 {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat; }
+  .logo-icon .logo1 {
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/bg-logo-1.svg"); }
+  .logo-icon .logo2 {
+    width: 18px;
+    height: 16px;
+    background-image: url("../img/bg-logo-2.svg");
+    margin-bottom: 2%; }
+  .logo-icon .logo3 {
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/bg-logo-3.svg");
+    margin-bottom: 6%; }
+  .logo-icon .logo4 {
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/bg-logo-4.svg"); }
+
+.menu-button {
+  position: absolute;
+  top: 68px;
+  right: 96px;
+  width: 32px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 5000; }
+  .menu-button .button-line {
+    width: 32px;
+    height: 5px;
+    background-color: #7F939E; }
+
+.date {
+  position: absolute;
+  z-index: 5000;
+  color: #fff;
+  top: 63px;
+  left: 195px;
+  font-family: "SpaceGroteskBold";
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .date .day {
+    margin-right: 5px; }
+  .date .month {
+    text-transform: uppercase;
+    margin-right: 5px; }
+  .date .year {
+    margin-right: 5px; }
+  .date .double-slash {
+    margin-bottom: 4px;
+    margin-right: 5px;
+    color: #55636a; }
+
+.rights {
+  position: absolute;
+  z-index: 5000;
+  bottom: 68px;
+  left: 96px;
+  font-family: "SpaceGroteskMedium";
+  font-size: 15px;
+  color: #525F66; }
+
+.social {
+  position: absolute;
+  z-index: 5000;
+  bottom: 68px;
+  right: 96px;
+  width: 372px;
+  height: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .social div {
+    cursor: pointer;
+    width: 26px;
+    height: 18px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .social .behance-icon {
+    background-image: url("../img/behance.svg"); }
+  .social .vimeo-icon {
+    background-image: url("../img/vimeo.svg"); }
+  .social .twitter-icon {
+    background-image: url("../img/twitter.svg"); }
+  .social .facebook-icon {
+    background-image: url("../img/facebook.svg"); }
+  .social .linkedin-icon {
+    background-image: url("../img/linkedin.svg"); }
+  .social .instagram-icon {
+    background-image: url("../img/instagram.svg"); }
+  .social .telegram-icon {
+    background-image: url("../img/telegram.svg"); }
+
+/*--------------------------------------------------Reel Screen*/
+.reel {
+  background-color: #000;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .reel .reel-top {
+    position: absolute;
+    top: 68px;
+    padding-right: 100px; }
+    .reel .reel-top .reel-title {
+      min-width: 68px;
+      min-height: 19px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+      .reel .reel-top .reel-title .stretch {
+        width: 22px;
+        height: 19px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url("../img/r.svg"); }
+      .reel .reel-top .reel-title .fixed {
+        width: 46px;
+        height: 19px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url("../img/eel.svg"); }
+    .reel .reel-top .decorations {
+      width: 522px;
+      height: 87px;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url("../img/reel-top-decor.svg");
+      position: absolute;
+      top: 0;
+      right: -300%; }
+  .reel .video-frame {
+    background-color: whitesmoke;
+    width: calc(100% - 190px);
+    height: calc(100% - 350px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative; }
+    .reel .video-frame .play-button {
+      width: 86px;
+      height: 86px;
+      background-image: url("../img/play-button.svg");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      cursor: pointer; }
+    .reel .video-frame .play-button:hover {
+      width: 88px;
+      height: 88px; }
+  .reel .video-frame:after {
+    content: "";
+    position: absolute;
+    width: 21px;
+    height: 7px;
+    background: center/contain no-repeat url("../img/green-dots.svg");
+    bottom: -40px;
+    left: 290px; }
 
 /*-------------------------------------------------First Screen*/
 .main {
-  background-color: #a3bbbe;
+  background-color: #000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,9 +342,9 @@ body {
 
 .logo div.shown {
   opacity: 1;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s; }
+  -webkit-transition: 0.5s ease-out;
+  -o-transition: 0.5s ease-out;
+  transition: 0.5s ease-out; }
 
 .letter1 {
   background-image: url("../img/logo1.png"); }
@@ -104,3 +367,22 @@ body {
 
 .letter9 {
   background-image: url("../img/logo9.png"); }
+
+.video-modal {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 5000; }
+  .video-modal player {
+    width: calc(100% - 190px) !important;
+    height: calc(100% - 350px) !important; }

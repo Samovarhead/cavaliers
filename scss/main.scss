@@ -1,3 +1,4 @@
+@import "variables.scss";
 *{
   margin: 0;
   padding: 0;
@@ -19,19 +20,193 @@ body{
 .active{
   top: 0;
   transition: 0.5s;
+  transition-timing-function: (.32, 1, 0, .89);
 }
 .gone-bottom{
   top: 100%;
   transition: 0.5s;
+  transition-timing-function: (.32, 1, 0, .89);
 }
 .gone-top{
   top: -100%;
   transition: 0.5s;
+  transition-timing-function: (.32, 1, 0, .89);
 }
-
+/*-------------------------------------------------Fixed-pan*/
+@include logo-icon(68px, 82px, 16px, 16px, 18px, 16px, 16px, 16px, 16px, 16px, 5000);
+.menu-button{
+  position: absolute;
+  top: 68px;
+  right: 96px;
+  width: 32px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 5000;
+  .button-line{
+    width: 32px;
+    height: 5px;
+    background-color: #7F939E;
+  }
+}
+.date{
+  position: absolute;
+  z-index: 5000;
+  color: #fff;
+  top: 63px;
+  left: 195px;
+  font-family: "SpaceGroteskBold";
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  .day{
+    margin-right: 5px;
+  }
+  .month{
+    text-transform: uppercase;
+    margin-right: 5px;
+  }
+  .year{
+    margin-right: 5px;
+  }
+  .double-slash{
+    margin-bottom: 4px;
+    margin-right: 5px;
+    color: #55636a
+  }
+}
+.rights{
+  position: absolute;
+  z-index: 5000;
+  bottom: 68px;
+  left: 96px;
+  font-family: "SpaceGroteskMedium";
+  font-size: 15px;
+  color: #525F66;
+}
+.social{
+  position: absolute;
+  z-index: 5000;
+  bottom: 68px;
+  right: 96px;
+  width: 372px;
+  height: 22px;
+  display: flex;
+  justify-content: space-between;
+  div{
+    cursor: pointer;
+    width: 26px;
+    height: 18px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .behance-icon{
+    background-image: url("../img/behance.svg");
+  }
+  .vimeo-icon{
+    background-image: url("../img/vimeo.svg");
+  }
+  .twitter-icon{
+    background-image: url("../img/twitter.svg");
+  }
+  .facebook-icon{
+    background-image: url("../img/facebook.svg");
+  }
+  .linkedin-icon{
+    background-image: url("../img/linkedin.svg");
+  }
+  .instagram-icon{
+    background-image: url("../img/instagram.svg");
+  }
+  .telegram-icon{
+    background-image: url("../img/telegram.svg");
+  }
+}
+/*--------------------------------------------------Reel Screen*/
+.reel{
+  background-color: #000;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .reel-top{
+    position: absolute;
+    top: 68px;
+    padding-right: 100px;
+    .reel-title{
+      min-width: 68px;
+      min-height: 19px;
+      display: flex;
+      justify-content: center;
+      .stretch{
+        width: 22px;
+        height: 19px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url("../img/r.svg");
+      }
+      .fixed{
+        width: 46px;
+        height: 19px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url("../img/eel.svg");
+      }
+    }
+    .decorations{
+      width: 522px;
+      height: 87px;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url("../img/reel-top-decor.svg");
+      position: absolute;
+      top: 0;
+      right: -300%;
+    }
+  }
+  .video-frame{
+    background-color: whitesmoke;
+    width: calc(100% - 190px);
+    height: calc(100% - 350px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    .play-button{
+      width: 86px;
+      height: 86px;
+      background-image: url("../img/play-button.svg");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
+    .play-button:hover{
+      width: 88px;
+      height: 88px;
+    }
+  }
+  .video-frame:after{
+    content: "";
+    position: absolute;
+    width: 21px;
+    height: 7px;
+    background: center / contain no-repeat url("../img/green-dots.svg");
+    bottom: -40px;
+    left: 290px;
+  }
+}
 /*-------------------------------------------------First Screen*/
 .main{
-  background-color: #a3bbbe;
+  background-color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,7 +238,7 @@ body{
   }
   div.shown{
     opacity: 1;
-    transition: 0.5s;
+    transition: 0.5s ease-out;
   }
 }
 .letter1{
@@ -87,4 +262,24 @@ body{
 }
 .letter9{
   background-image: url("../img/logo9.png");
+}
+
+
+
+
+
+//-----------------------Video modal
+.video-modal{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 5000;
+  player{
+    width: calc(100% - 190px)!important;
+    height: calc(100% - 350px)!important;
+  }
 }

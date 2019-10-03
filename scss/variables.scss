@@ -1,0 +1,75 @@
+@font-face{
+  font-family: "BebasNeueBook";
+  src : url("../fonts/BebasNeueBook.otf");
+}
+@font-face{
+  font-family: "MorganiteBold";
+  src : url("../fonts/Morganite Bold.ttf");
+}
+@font-face{
+  font-family: "MorganiteBook";
+  src : url("../fonts/Morganite-Book.ttf");
+}
+@font-face{
+  font-family: "MorganiteExtraBold";
+  src : url("../fonts/Morganite-ExtraBold.ttf");
+}
+@font-face{
+  font-family: "MorganiteMedium";
+  src : url("../fonts/Morganite-Medium.ttf");
+}
+@font-face{
+  font-family: "MorganiteSemiBold";
+  src : url("../fonts/Morganite-SemiBold.ttf");
+}
+@font-face{
+  font-family: "SpaceGroteskBold";
+  src : url("../fonts/SpaceGrotesk-Bold.otf");
+}
+@font-face{
+  font-family: "SpaceGroteskMedium";
+  src : url("../fonts/SpaceGrotesk-Medium.otf");
+}
+@font-face{
+  font-family: "SpaceGroteskRegular";
+  src : url("../fonts/SpaceGrotesk-Regular.otf");
+}
+
+@mixin logo-icon($logo-top, $logo-left, $logo1-w, $logo1-h, $logo2-w, $logo2-h, $logo3-w, $logo3-h, $logo4-w, $logo4-h, $z-index){
+  .logo-icon{
+    position: absolute;
+    top: $logo-top;
+    left: $logo-left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: $z-index;
+    .logo1, .logo2, .logo3, .logo4{
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    .logo1{
+      width: $logo1-w;
+      height: $logo1-h;
+      background-image: url("../img/bg-logo-1.svg");
+    }
+    .logo2{
+      width: $logo2-w;
+      height: $logo2-h;
+      background-image: url("../img/bg-logo-2.svg");
+      margin-bottom: 2%;
+    }
+    .logo3{
+      width: $logo3-w;
+      height: $logo3-h;
+      background-image: url("../img/bg-logo-3.svg");
+      margin-bottom: 6%;
+    }
+    .logo4{
+      width: $logo4-w;
+      height: $logo4-h;
+      background-image: url("../img/bg-logo-4.svg");
+    }
+  }
+}

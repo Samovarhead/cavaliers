@@ -51,4 +51,5 @@ $(function () {
             $('.letter9').addClass('shown');
         },960);
     }, 500);
-})
+});
+
